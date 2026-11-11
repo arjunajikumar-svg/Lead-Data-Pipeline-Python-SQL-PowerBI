@@ -2,9 +2,7 @@
 
 An automated pipeline that cleans messy sales-lead data in Python, loads it into MySQL, runs the analysis with stored procedures, and feeds a Power BI dashboard. It is built for files that arrive daily with the same structure.
 
-
-<img width="1228" height="705" alt="Screenshot 2026-11-11 015658" src="https://github.com/user-attachments/assets/d9085c0d-fbd6-4776-be8b-c9162bfc3e21" />
-
+<img width="1228" height="705" alt="Screenshot 2026-11-11 015658" src="https://github.com/user-attachments/assets/832cec52-72d6-441c-b179-bff8803d9eb8" />
 
 ## Business problem
 
@@ -71,6 +69,25 @@ flowchart LR
 
 To run it daily, schedule `pipeline.py` with Windows Task Scheduler.
 
+## Project structure
+
+```
+Lead-Data-Pipeline-Python-SQL-PowerBI/
+├── README.md
+├── requirements.txt
+├── .gitignore
+├── data/
+│   ├── raw/leads_sample.csv
+│   └── cleaned/cleaned_leads_sample.csv
+├── python/
+│   ├── 01_cleaning_notebook.ipynb
+│   └── pipeline.py
+├── sql/
+│   └── leads_db.sql
+└── powerbi/
+    ├── Lead_Performance_Dashboard.pbix
+    └── dashboard.png
+```
 
 ## Tech stack
 
